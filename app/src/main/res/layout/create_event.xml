@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spotmeal.CreateEvent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Clickable title -->
+        <TextView   android:id="@+id/event_information_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/event_info_title_expanded"
+            android:clickable="true"
+            android:onClick="toggleEventInfo"
+            android:textSize="@dimen/_labels_font_size"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorBackground"/>
+        <!--content to hide/show -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/container_padding"
+            android:id="@+id/event_information_view"
+            android:layout_below="@+id/event_information_label">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Your Event"
+                    android:textSize="@dimen/_labels_font_size"/>
+            </TableRow>
+            <TableRow
+                android:padding="@dimen/container_padding">
+
+                <TextView
+                    android:id="@+id/title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event Title"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                <EditText
+                    android:id="@+id/event_title"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:hint="title"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_labels_font_size" />
+            </TableRow>
+            <TableRow
+                android:padding="@dimen/container_padding">
+
+                <TextView
+                    android:id="@+id/cuisine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cuisine"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+
+                <Spinner
+                    android:id="@+id/cuisine_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/_labels_font_size" />
+
+            </TableRow>
+
+            <TableRow
+                android:padding="@dimen/container_padding">
+
+                <TextView
+                    android:id="@+id/spice_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spice level"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+
+                <Spinner
+                    android:id="@+id/spice_level_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+            </TableRow>
+
+            <TableRow
+                android:padding="@dimen/container_padding">
+
+                <TextView
+                    android:id="@+id/starters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Starters"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                <EditText
+                    android:id="@+id/starters_input1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="starter1"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+            </TableRow>
+            <TableRow
+                android:padding="@dimen/container_padding">
+
+                <TextView/>
+
+                <EditText
+                    android:id="@+id/starters_input2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="starter2"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:padding="@dimen/container_padding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/main_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Main Course"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                <EditText
+                    android:id="@+id/main_course_input1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="entree option 1"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:padding="@dimen/container_padding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView/>
+
+                <EditText
+                    android:id="@+id/main_course_input2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="entree option 2"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:padding="@dimen/container_padding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/desert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desert"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                <EditText
+                    android:id="@+id/desert_input1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="desert option 1"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+            </TableRow>
+            <TableRow
+                android:padding="@dimen/container_padding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView/>
+
+                <EditText
+                    android:id="@+id/desert_input2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="desert option 2"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:padding="@dimen/container_padding">
+
+                <TextView
+                    android:id="@+id/drinks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Drinks"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                <EditText
+                    android:id="@+id/drinks_input1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="drink option 1"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+
+            </TableRow>
+            <TableRow
+                android:padding="@dimen/container_padding">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                <EditText
+                    android:id="@+id/drinks_input2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="drink option 2"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+
+            </TableRow>
+            <TableRow
+                android:padding="@dimen/container_padding">
+                <TextView
+                    android:id="@+id/min_guests_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Min Guests"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                <Spinner
+                    android:id="@+id/min_guests"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow
+                android:padding="@dimen/container_padding">
+                <TextView
+                    android:id="@+id/max_guests_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max Guests"
+                    android:textSize="@dimen/_labels_font_size"/>
+                <Spinner
+                    android:id="@+id/max_guests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_labels_font_size"/>
+            </TableRow>
+            <TableRow
+                android:padding="@dimen/container_padding">
+
+                <TextView
+                    android:id="@+id/cost_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cost per person"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                <EditText
+                    android:id="@+id/cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="$$"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+            </TableRow>
+
+            <TableRow
+                android:padding="@dimen/container_padding">
+                <TextView
+                    android:id="@+id/start_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event date"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                <EditText
+                    android:id="@+id/date_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="mm/dd/yyyy"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:textSize="@dimen/_labels_font_size" />
+                <!--<DatePicker-->
+                <!--android:id="@+id/datePicker"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+            </TableRow>
+            <!--<TableRow
+                android:padding="@dimen/container_padding">
+                <TextView
+                    android:id="@+id/end_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End date"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+                &lt;!&ndash;<DatePicker&ndash;&gt;
+                &lt;!&ndash;android:id="@+id/datePicker2"&ndash;&gt;
+                &lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;
+                &lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;
+                <EditText
+                    android:id="@+id/end_date_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:text="12/31/2017"
+                    android:textSize="@dimen/_labels_font_size"/>
+
+            </TableRow>-->
+            <TableRow
+                android:padding="@dimen/container_padding">
+                <TextView
+                    android:id="@+id/start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Time"
+                    android:textSize="@dimen/_labels_font_size"/>
+                <Spinner
+                    android:id="@+id/start_time_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_labels_font_size"/>
+            </TableRow>
+            <TableRow
+                android:padding="@dimen/container_padding">
+                <TextView
+                    android:id="@+id/end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Time"
+                    android:textSize="@dimen/_labels_font_size"/>
+                <Spinner
+                    android:id="@+id/end_time_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_labels_font_size"/>
+            </TableRow>
+
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/txt_help_gest"-->
+            <!--android:layout_width=   <TextView
+                    android:id="@+id/max_guests_label"
+                    aView
+                    android:id="@+id/max_guests_label"
+                    aView
+                    android:id="@+id/max_guests_label"
+                    aView
+                    android:id="@+id/max_guests_label"
+                    aView
+                    android:id="@+id/max_guests_label"
+                    aarent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="when">-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="nbewhifvq3ukvwfc aej,bclqiuwefvc;wabvrejkbfjkwbfjh,bg4fiql3rvcjehvfjwhrbfvkjmds chwrvfijrkwhbfdsc jhrvfds cjmsd c"-->
+            <!--android:textSize="10sp"/>-->
+
+
+            <!--</RelativeLayout>-->
+
+        </TableLayout>
+        <!-- Clickable title -->
+        <TextView   android:id="@+id/add_images_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_images_title_expanded"
+            android:clickable="true"
+            android:onClick="toggleImageUpload"
+            android:textSize="@dimen/_labels_font_size"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/event_information_view"
+            android:background="@color/colorBackground"/>
+        <!--content to hide/show -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_images_view"
+            android:layout_below="@+id/add_images_title">
+            <Button
+                android:id="@+id/select_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select pictures"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:drawableRight="@android:drawable/picture_frame"
+                android:layout_gravity="center"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/upload_pictures_view"/>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/upload_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:drawableRight="@android:drawable/ic_menu_upload"
+                android:layout_gravity="center"/>
+
+        </TableLayout>
+
+        <!-- Clickable title -->
+        <TextView   android:id="@+id/select_location_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_location_title_expanded"
+            android:clickable="true"
+            android:onClick="toggleSelectLocation"
+            android:textSize="@dimen/_labels_font_size"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/add_images_view"
+            android:background="@color/colorBackground"/>
+        <!--content to hide/show -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/container_padding"
+            android:id="@+id/location_picker_view"
+            android:layout_below="@+id/select_location_title">
+            <TableRow>
+                <Button
+                    android:id="@+id/pick_location_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select location"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    android:drawableRight="@android:drawable/ic_dialog_map"
+                    android:layout_gravity="center"/>
+
+                <TextView   android:id="@+id/selected_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/_labels_font_size"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/create_event"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location_picker_view"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/wide_button"
+            android:text="@string/create_event"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_labels_font_size" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,4 @@
+#Sat Dec 02 04:12:12 CST 2017
+base.0=/Users/parneet/MyData/AndroidStudioProjects/SpotMeal/app/build/intermediates/transforms/dexMerger/debug/3
+renamed.0=classes.dex
+file.0=/Users/parneet/MyData/AndroidStudioProjects/SpotMeal/app/build/intermediates/transforms/dexMerger/debug/3/classes.dex

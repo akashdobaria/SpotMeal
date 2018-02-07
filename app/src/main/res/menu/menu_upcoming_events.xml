@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.spotmeal.UpcomingEventsGuest">
+    <item
+        android:id="@+id/close_upcoming_events"
+        android:icon="@drawable/ic_dialog_close_light"
+        android:orderInCategory="100"
+        android:title="@string/close"
+        app:showAsAction="always" />
+</menu>

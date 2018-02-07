@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/eventLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="20sp">
+
+                <TextView
+                    android:id="@+id/event_details_event_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="title"
+                    android:textSize="@dimen/event_font_size_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/event_details_cuisine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="tags"
+                    android:textStyle="italic"
+                    android:textSize="@dimen/event_font_size_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:paddingLeft="20sp"
+                android:paddingRight="20sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/event_details_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$10"
+                        android:textSize="@dimen/event_font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/event_details_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sat, Dec 16, '17"
+                        android:textSize="@dimen/event_font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/event_details_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4:00 PM to 8:00 PM"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/event_font_size_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/event_details_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text=".5 miles"
+                        android:textSize="@dimen/event_font_size_small" />
+
+                    <TextView
+                        android:id="@+id/event_details_no_of_ratings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 ratings"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/event_font_size_medium" />
+
+
+<!--
+                    <TextView
+                        android:id="@+id/seats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Max Guests 4"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/event_font_size_medium" />-->
+
+                    <TextView
+                        android:id="@+id/event_details_numberOfGuests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Max Guests 4"
+                        android:textAlignment="viewEnd"
+                        android:textSize="@dimen/event_font_size_medium" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorBackground"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="MENU"
+                android:textColor="#000"
+                android:textSize="@dimen/event_font_size_large" />
+
+            <TableLayout
+                android:id="@+id/menu_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:scrollbarAlwaysDrawVerticalTrack="false">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp">
+
+                    <TextView
+                        android:id="@+id/starter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Starters"
+                        android:textSize="@dimen/event_menu_font_size"
+                        android:textStyle="italic" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/starter1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="starter1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/event_menu_item_size" />
+
+                    <TextView
+                        android:id="@+id/starter2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="starter2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/event_menu_item_size" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10sp">
+
+                    <TextView
+                        android:id="@+id/entree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Entree"
+                        android:textSize="@dimen/event_menu_font_size"
+                        android:textStyle="italic" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/entree1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="entree1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/event_menu_item_size" />
+
+                    <TextView
+                        android:id="@+id/entree2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="entree2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/event_menu_item_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/desert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:text="Deserts"
+                        android:textSize="@dimen/event_menu_font_size"
+                        android:textStyle="italic" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/desert1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="desert1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/event_menu_item_size" />
+
+                    <TextView
+                        android:id="@+id/desert2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="desert2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/event_menu_item_size" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/drinks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:text="Drinks"
+                        android:textSize="@dimen/event_menu_font_size"
+                        android:textStyle="italic" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/drink1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="drink1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/event_menu_item_size" />
+
+                    <TextView
+                        android:id="@+id/drink2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="drink2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/event_menu_item_size" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" />
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/no_of_guests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Number of guests"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/event_menu_item_size" />
+                    <!--<EditText-->
+                    <!--android:id="@+id/no_of_guests_input"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="1"-->
+                    <!--android:inputType="number"-->
+                    <!--android:textSize="@dimen/event_menu_item_size" />-->
+                    <Spinner
+                        android:id="@+id/select_no_of_guests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd">
+
+                    </Spinner>
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginBottom="20sp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="30sp"
+                android:paddingRight="30sp">
+
+                <Button
+                    android:id="@+id/customizeID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/wide_button"
+                    android:text="  Customize "
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_font_size" />
+
+                <Button
+                    android:id="@+id/reserveID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/wide_button"
+                    android:text="    Reserve     "
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_font_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

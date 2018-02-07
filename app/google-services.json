@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "206886654819",
+    "firebase_url": "https://spotmeal-27930.firebaseio.com",
+    "project_id": "spotmeal-27930",
+    "storage_bucket": "spotmeal-27930.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206886654819:android:b784e477c0d74204",
+        "android_client_info": {
+          "package_name": "com.spotmeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206886654819-7s5grurnesd4m3fjpkhdi5o0pp85dn9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeIrSMQbRsSfJ_ZM686s-4se6o4RPsUCU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

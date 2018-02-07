@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spotmeal.HomeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearayout_FilterStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+        </HorizontalScrollView>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/list_view_home_guest"
+        android:layout_height="367dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/event_list_view_guest"
+        app:layout_anchorGravity="bottom|left"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/filter_button_image"
+        android:background="@drawable/wide_button"
+        android:text="   Filters"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_font_size"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:layout_margin="20sp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/view_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        app:srcCompat="@android:drawable/ic_dialog_map"
+        android:textSize="@dimen/_labels_font_size"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_margin="20sp"/>
+
+</android.support.design.widget.CoordinatorLayout>

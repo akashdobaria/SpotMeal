@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="Search Location Here"/>
+
+
+            <!--<Button-->
+            <!--android:id="@+id/search_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:onClick="onMapSearch"-->
+            <!--android:text="Search" />-->
+
+            <ImageButton
+                android:id="@+id/search_button"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_search" />
+
+            <ImageButton
+                android:id="@+id/closeMapbtn"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_dialog_close_light" />
+
+
+
+        </LinearLayout>
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.spotmeal.MapViewActivity" />
+
+
+        <Button
+            android:id="@+id/filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/map"
+            app:layout_anchorGravity="bottom|left"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/filter_button_image"
+            android:background="@drawable/wide_button"
+            android:text="   Filters"
+            android:textAllCaps="false"
+            android:textSize="@dimen/button_font_size"
+            android:paddingLeft="20sp"
+            android:paddingRight="20sp"
+            android:layout_margin="20sp"/>
+
+        <!--<Button-->
+        <!--android:id="@+id/pick_location"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="10sp"-->
+        <!--android:background="@drawable/wide_button"-->
+        <!--android:contentDescription="AboutUs"-->
+        <!--android:drawableLeft="@drawable/places_ic_search"-->
+        <!--android:paddingLeft="20sp"-->
+        <!--android:paddingRight="20sp"-->
+        <!--android:text=" Search"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textSize="@dimen/button_font_size"-->
+        <!--app:layout_anchor="@+id/filters"-->
+        <!--android:layout_gravity="right|center"-->
+        <!--app:layout_anchorGravity="end|center" />-->
+
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
+

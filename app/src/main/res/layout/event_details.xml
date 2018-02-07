@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_details_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:minHeight="150sp"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+
+        <ImageButton
+            android:id="@+id/user_profile_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/profile_circular_border_imageview"
+            android:elevation="5dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical|center"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/user_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textSize="@dimen/event_font_size_medium" />
+
+            <TextView
+                android:id="@+id/userAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1209 W Lexington Street"
+                android:textSize="@dimen/event_font_size_small" />
+
+            <TextView
+                android:id="@+id/userCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chicago, IL"
+                android:textSize="@dimen/event_font_size_small" />
+
+            <Button
+                android:id="@+id/view_on_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="view on map"
+                android:textColor="@color/colorPrimaryDark"
+                tools:textAllCaps="false" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/close_event_details"
+            android:layout_width="36sp"
+            android:layout_height="36sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_dialog_close_light"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:minHeight="50sp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/eventButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2sp"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:elevation="30dp"
+            android:onClick="onRadioButtonClick"
+            android:text="EVENT"
+            android:textSize="@dimen/_labels_font_size" />
+
+        <Button
+            android:id="@+id/hostButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2sp"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:onClick="onRadioButtonClick"
+            android:text="HOST"
+            android:textSize="@dimen/_labels_font_size" />
+
+        <Button
+            android:id="@+id/reviewsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            android:onClick="onRadioButtonClick"
+            android:text="REVIEWS"
+            android:textSize="@dimen/_labels_font_size" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/titles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+<!--</ScrollView>-->
